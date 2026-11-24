@@ -1,0 +1,50 @@
+<div id="app">
+  <header id="hud" hidden>
+    <div class="hc" id="h-day"><span id="h-dayn">第一天</span><span id="h-time">辰时</span></div>
+    <div class="hc" title="铜钱"><img id="i-coin" alt=""><b id="h-money">0</b><small>文</small></div>
+    <div class="hc" title="名气越高，上门的客人越多"><img id="i-fame" alt=""><small class="fame-l">名气</small><b id="h-fame">0</b><span id="h-stars"></span><div class="fbar"><i id="h-fbar"></i></div></div>
+    <div class="hc" title="掌柜精力：亲自帮忙点菜、上菜、擦桌子时消耗，会慢慢恢复"><small class="en-l">精力</small><span id="h-en"></span></div>
+    <div class="hud-spacer"></div>
+    <div class="seg" id="speedseg" aria-label="游戏速度">
+      <button class="hbtn" data-speed="0" title="暂停" aria-label="暂停">❚❚</button>
+      <button class="hbtn" data-speed="1" title="正常速度">正常</button>
+      <button class="hbtn" data-speed="2" title="加速（两倍速）">加速</button>
+    </div>
+    <div class="seg">
+      <button class="hbtn" id="b-music" title="背景音乐" aria-pressed="true">音乐</button>
+      <button class="hbtn" id="b-sys" title="系统">☰</button>
+    </div>
+  </header>
+  <div id="goalbar" hidden></div>
+  <div id="stage">
+    <canvas id="cv" aria-label="云来客栈大堂"></canvas>
+    <div id="title-ui">
+      <div class="tbtns" id="title-btns"></div>
+      <div class="tnote">点击屏幕上的客人、菜碟、铜钱都能亲自帮忙 · 进度自动保存在本机浏览器</div>
+    </div>
+    <div id="toasts" aria-live="polite"></div>
+    <div id="dlg" hidden>
+      <div class="portrait"><canvas width="240" height="240"></canvas></div>
+      <div class="box"><div class="name"></div><div class="text"></div><div class="choices"></div><div class="more">▼</div></div>
+    </div>
+  </div>
+  <nav id="rail" hidden>
+    <div class="rl">
+      <button class="btn" id="b-menu"><img alt="">菜谱<span class="dot"></span></button>
+      <button class="btn" id="b-staff"><img alt="">伙计<span class="dot"></span></button>
+      <button class="btn" id="b-build"><img alt="">装修<span class="dot"></span></button>
+      <button class="btn" id="b-quest"><img alt="">任务<span class="dot"></span></button>
+      <button class="btn" id="b-ledger"><img alt="">账本</button>
+    </div>
+    <button class="btn red big" id="b-open">开张营业</button>
+  </nav>
+  <div class="rotate-tip">手机上横过来玩，画面更大</div>
+</div>
+<div id="toasts-top" aria-live="polite"></div>
+<div id="modal" hidden>
+  <div class="scroll" role="dialog" aria-modal="true" aria-labelledby="m-title">
+    <div class="scroll-head"><h2 id="m-title"></h2><button class="xbtn" id="m-close" aria-label="关闭">×</button></div>
+    <div class="tabs" id="m-tabs"></div>
+    <div class="scroll-body" id="m-body"></div>
+  </div>
+</div>
